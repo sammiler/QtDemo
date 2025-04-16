@@ -1,0 +1,11 @@
+add_executable(
+    Label
+    main.cpp 
+    Resource/resources.qrc
+)
+target_link_libraries(
+    Label
+    Qt5::Core
+    Qt5::Gui
+    Qt5::Widgets
+)

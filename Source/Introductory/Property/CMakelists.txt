@@ -1,0 +1,14 @@
+
+add_executable(
+    Property
+    WIN32
+    main.cpp
+    myclass.h
+)
+
+target_link_libraries(
+    Property
+    Qt5::Core
+    Qt5::Gui
+    Qt5::Widgets
+)

@@ -1,0 +1,18 @@
+add_executable(
+    Event
+    WIN32
+    main.cpp
+    mywindow.h
+    mywindow.cpp
+    myeventfilter.h
+    myeventfilter.cpp 
+    mycustomevent.h
+    mycustomevent.cpp   
+)
+
+target_link_libraries(
+Event
+Qt5::Core
+Qt5::Gui
+Qt5::Widgets
+)
