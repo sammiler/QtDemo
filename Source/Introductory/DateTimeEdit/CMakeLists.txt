@@ -1,0 +1,10 @@
+add_executable(
+        DateTimeEdit
+        WIN32
+        main.cpp
+)
+target_link_libraries(
+        DateTimeEdit
+        PRIVATE
+        ${QTLIBS}
+)

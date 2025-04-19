@@ -8,24 +8,7 @@
 #include <QStyle>
 #include <QDebug>
 #include <QPushButton>
-class A {
-    public:
-        virtual void a() {}
-        virtual void a1() {}
-        virtual void a2() {}
-    };
-    
-    class B : public A {
-    public:
-        using A::a1;  // 显式引入祖父类虚函数
-        using A::a2;
-        void a() override {}
-    };
-    
-    class C : public B {
-    public:
-    };
-    
+
 class TriStateButton : public QPushButton
 {
     Q_OBJECT

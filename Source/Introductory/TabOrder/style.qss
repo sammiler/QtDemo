@@ -1,0 +1,42 @@
+/**********按钮**********/
+QPushButton{
+        background: rgb(68, 69, 73);
+        border: 1px solid rgb(45, 45, 45);
+        color: rgb(230, 230, 230);
+        width: 75px;
+        height: 25px;
+        outline: none; /* 移除默认的焦点虚线框 */
+}
+/* 鼠标悬停或获得焦点时的样式 */
+QPushButton:hover, QPushButton:focus{
+        border-color: rgb(0, 160, 230); /* 边框变为蓝色 */
+        background: rgb(85, 85, 85);
+}
+/* 按钮被按下或被勾选时的样式 */
+QPushButton:pressed, QPushButton:checked{
+        border-color: rgb(0, 160, 230);
+        background: rgb(0, 160, 230);
+}
+
+/**********输入框**********/
+QLineEdit {
+        /* border-radius: none; /* 通常 QLineEdit 没有默认圆角，这行作用不大 */
+        height: 25px;
+        border: 1px solid rgb(45, 45, 45);
+        background: rgb(57, 58, 60);
+        padding: 0 5px; /* 添加内边距，避免文字紧贴边框 */
+}
+/* 启用状态下的文字颜色 */
+QLineEdit:enabled {
+        color: rgb(230, 230, 230);
+}
+/* 启用状态下鼠标悬停或获得焦点时的样式 */
+QLineEdit:enabled:hover, QLineEdit:enabled:focus {
+        border-color: rgb(0, 160, 230); /* 边框变为蓝色 */
+        color: rgb(230, 230, 230);
+}
+/* 禁用状态下的样式 */
+QLineEdit:!enabled {
+        color: rgb(155, 155, 155);
+        background: rgb(70, 70, 70); /* 禁用时背景色变深 */
+}

@@ -1,0 +1,97 @@
+/* Style for the QTableView widget */
+QTableView {
+        border: 1px solid rgb(50, 50, 50); /* 表格边框 */
+        background: rgb(57, 58, 60); /* 表格背景色 */
+        gridline-color: rgb(60, 60, 60); /* 网格线颜色 (如果 setShowGrid(true)) */
+        selection-background-color: rgb(0, 160, 230); /* 选中行的背景色 */
+        color: rgb(230, 230, 230); /* 默认文本颜色 */
+}
+
+/* Style for individual items in the table view */
+QTableView::item {
+        border: none; /* 移除单元项默认边框 */
+        border-bottom: 1px solid rgb(50, 50, 50); /* 给每个单元项底部添加一个细分隔线 */
+}
+
+/* Style for selected items */
+/* Note: selection-background-color on QTableView affects the whole row */
+/* This can be used for additional styling of selected items themselves if needed */
+/* QTableView::item:selected {
+        /* 例如：文本颜色变黑 */
+        /* color: black; */
+/* } */
+
+
+/* Style for the checkbox indicator within an item */
+QTableView::indicator {
+        width: 17px;  /* 设置复选框图标的宽度 */
+        height: 17px; /* 设置复选框图标的高度 */
+        /* 可选：添加一些内边距 */
+        /* padding: 2px; */
+}
+
+/* Styles for different states of the checkbox indicator */
+
+/* 未选中状态 */
+QTableView::indicator:enabled:unchecked {
+        image: url(:/Images/checkBox.png); /* 默认未选中图标 */
+}
+/* 未选中状态 - 鼠标悬停 */
+QTableView::indicator:enabled:unchecked:hover {
+        image: url(:/Images/checkBoxHover); /* 悬停时的未选中图标 */
+}
+/* 未选中状态 - 鼠标按下 */
+QTableView::indicator:enabled:unchecked:pressed {
+        image: url(:/Images/checkBoxPressed); /* 按下时的未选中图标 */
+}
+
+/* 选中状态 */
+QTableView::indicator:enabled:checked {
+        image: url(:/Images/checkBoxChecked); /* 默认选中图标 */
+}
+/* 选中状态 - 鼠标悬停 */
+QTableView::indicator:enabled:checked:hover {
+        image: url(:/Images/checkBoxCheckedHover); /* 悬停时的选中图标 */
+}
+/* 选中状态 - 鼠标按下 */
+QTableView::indicator:enabled:checked:pressed {
+        image: url(:/Images/checkBoxCheckedPressed); /* 按下时的选中图标 */
+}
+
+/* 不确定状态 (如果 flags 中支持 Qt::ItemIsTristate 并且模型实现了) */
+QTableView::indicator:enabled:indeterminate {
+        image: url(:/Images/checkBoxIndeterminate); /* 默认不确定图标 */
+}
+/* 不确定状态 - 鼠标悬停 */
+QTableView::indicator:enabled:indeterminate:hover {
+        image: url(:/Images/checkBoxIndeterminateHover); /* 悬停时的不确定图标 */
+}
+/* 不确定状态 - 鼠标按下 */
+QTableView::indicator:enabled:indeterminate:pressed {
+        image: url(:/Images/checkBoxIndeterminatePressed); /* 按下时的不确定图标 */
+}
+
+/* 可选：禁用状态下的复选框样式 */
+/* QTableView::indicator:disabled {
+        image: url(:/Images/checkBoxDisabled.png); /* 禁用图标 */
+/* } */
+/* QTableView::indicator:disabled:checked {
+         image: url(:/Images/checkBoxCheckedDisabled.png);
+/* } */
+
+/* Style for table headers */
+QHeaderView::section {
+    background-color: rgb(68, 69, 73); /* 表头背景色 */
+    color: rgb(230, 230, 230); /* 表头文本颜色 */
+    padding: 5px; /* 内边距 */
+    border: 1px solid rgb(60, 60, 60); /* 边框 */
+    /* 移除表头底部边框，使用 item 底部边框作为分隔线 */
+    border-bottom: none;
+}
+
+/* 移除最后一个表头右边框，与表格右边框融合 */
+QHeaderView::section:last {
+    border-right: none;
+}
+
+/* 如果 horizontalHeader()->setStretchLastSection(true)，最后一个 section 也会拉伸 */

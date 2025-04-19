@@ -1,0 +1,18 @@
+/* style.qss */
+
+QProgressBar {
+    border: 1px solid grey; /* 添加边框以便看到进度条的范围 */
+    border-radius: 5px;
+    text-align: center; /* 文本居中 */
+    background-color: #e0e0e0; /* 进度条背景 */
+}
+
+QProgressBar::chunk {
+    background-color: #05B8CC; /* 进度条块颜色 */
+    width: 20px; /* 块的宽度 (如果设置了 text-align: center, 这个宽度可能不明显) */
+    /* margin: 0.5px; */ /* 块之间的间隔，如果需要 */
+}
+
+/* 可以为不同的状态设置不同的样式，例如下载完成或错误 */
+/* QProgressBar#myProgressBar[progress="100"] { border: 1px solid green; } */
+/* QProgressBar#myProgressBar[status="error"] { background-color: red; } */

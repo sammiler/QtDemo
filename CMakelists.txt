@@ -11,6 +11,13 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # Find Qt libraries
 find_package(Qt5 REQUIRED COMPONENTS Core Gui Widgets)
 
+
+set(QTLIBS
+        Qt5::Core
+        Qt5::Gui
+        Qt5::Widgets
+)
+
 # Enable automoc, autouic, and autorcc
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)

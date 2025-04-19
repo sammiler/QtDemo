@@ -55,6 +55,8 @@ class CopyDllTask:
         """递归查找指定类型的动态链接库文件"""
         lib_files = []
         try:
+            if directory == self.target_dir:
+                return lib_files
             for entry in directory.iterdir():
                 if entry.is_dir():
                     # 递归处理子目录

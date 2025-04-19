@@ -1,0 +1,69 @@
+/* Custom Frameless Window Styles */
+
+/* Style for the TitleBar widget */
+TitleBar {
+    background-color: #333; /* Dark background for title bar */
+    color: #fff; /* White text color */
+}
+
+/* Style for the Title Label (using object name) */
+QLabel#whiteLabel {
+    color: #fff; /* White text */
+    font-weight: bold; /* Bold font */
+}
+
+/* Style for the Minimize, Maximize, Close buttons (base style) */
+QPushButton {
+    border: none; /* No border */
+    background-color: transparent; /* Transparent background by default */
+    /* Optional: add default icon here if not using individual styles */
+}
+
+/* Style for the Minimize button (using object name) */
+QPushButton#minimizeButton {
+    /* Example: set icon using QSS if you added it to resources.qrc */
+    /* image: url(:/Images/minimize.png); */
+}
+
+/* Style for the Maximize/Restore button (using object name and dynamic property) */
+QPushButton#maximizeButton {
+    /* Example: set icon based on 'maximizeProperty' */
+    /* image: url(:/Images/maximize.png); */
+}
+/* Style when maximized */
+QPushButton#maximizeButton[maximizeProperty="restore"] {
+    /* Example: set icon for restore state */
+    /* image: url(:/Images/restore.png); */
+}
+
+/* Style for the Close button (using object name) */
+QPushButton#closeButton {
+    /* Example: set icon */
+    /* image: url(:/Images/close.png); */
+}
+
+/* Hover state for buttons */
+QPushButton:hover {
+    background-color: #555; /* Slightly lighter background on hover */
+}
+
+/* Hover state for Close button (often has a different hover color) */
+QPushButton#closeButton:hover {
+    background-color: #e81123; /* Red background on hover for close button */
+    color: white; /* Ensure text/icon stays visible on red background */
+}
+
+/* Pressed state for buttons */
+QPushButton:pressed {
+    background-color: #777; /* Even lighter background when pressed */
+}
+
+/* Pressed state for Close button */
+QPushButton#closeButton:pressed {
+    background-color: #f1707a; /* Lighter red when pressed */
+}
+
+/* Optional: Style for the main window background */
+/* QWidget {
+    background-color: #505050; /* Matches the color set in CustomWindow */
+/* } */

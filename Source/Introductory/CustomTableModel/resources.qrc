@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>style.qss</file>
+        <file>Images/checkBox.png</file>
+        <file>Images/checkBoxChecked.png</file>
+        <file>Images/checkBoxCheckedHover.png</file>
+        <file>Images/checkBoxCheckedPressed.png</file>
+        <file>Images/checkBoxHover.png</file>
+        <file>Images/checkBoxIndeterminate.png</file>
+        <file>Images/checkBoxIndeterminateHover.png</file>
+        <file>Images/checkBoxIndeterminatePressed.png</file>
+        <file>Images/checkBoxPressed.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,12 @@
+/* Style for the main frameless window managed by FramelessHelper */
+/* Using object name set in mainwindow.cpp */
+QWidget#mainFramelessWindow {
+    background-color: #464646; /* 一个深灰色背景 */
+    border: 1px solid #666; /* 添加一个细边框，帮助看清窗口边界 */
+    /* border: 5px solid rgba(0, 100, 255, 100); /* 可选：一个蓝色半透明边框，更易看缩放感应区 */
+}
+
+/* 示例内容标签样式 */
+QLabel {
+    color: white; /* 确保标签文字可见 */
+}

@@ -1,0 +1,111 @@
+/* Style for the QTableView widget */
+QTableView {
+        border: 1px solid rgb(50, 50, 50); /* 表格边框 */
+        background: rgb(57, 58, 60); /* 表格背景色 */
+        gridline-color: rgb(60, 60, 60); /* 网格线颜色 (如果 setShowGrid(true)) */
+        selection-background-color: rgb(0, 160, 230); /* 选中行的背景色 */
+        color: rgb(230, 230, 230); /* 默认文本颜色 */
+
+        /* 移除垂直和水平表头之间的边框，使其更平滑 */
+        border-top-left-radius: 0px; /* 左上角圆角 */
+        border-top-right-radius: 0px; /* 右上角圆角 */
+}
+
+/* Style for individual items in the table view */
+QTableView::item {
+        border: none; /* 移除单元项默认边框 */
+        border-bottom: 1px solid rgb(50, 50, 50); /* 给每个单元项底部添加一个细分隔线 */
+        /* 可选：设置单元项的默认内边距 */
+        padding: 5px;
+}
+
+/* Style for selected items */
+/* Note: selection-background-color on QTableView affects the whole row */
+/* This can be used for additional styling of selected items themselves if needed */
+/* QTableView::item:selected {
+        /* 例如：文本颜色变黑 */
+        /* color: black; */
+/* } */
+
+
+/* Style for the checkbox indicator within an item, targeted via the delegate drawing */
+/* This targets the QStyle::PE_IndicatorCheckBox primitive drawn by the delegate */
+/* Note: The delegate uses a temporary QCheckBox for context, so QCheckBox::indicator styles apply */
+QTableView::indicator {
+        /* width 和 height 在 delegate 中已设置 iconSize 和计算 rect */
+        /* image: url(:/Images/default_indicator.png); /* 可选：设置一个默认图片，以防状态图片缺失 */
+}
+
+/* Styles for different states of the checkbox indicator (apply to both delegate and header drawing) */
+/* Note: These rules target the QCheckBox::indicator style primitive */
+
+/* 未选中状态 */
+QCheckBox::indicator:enabled:unchecked {
+        image: url(:/Images/checkBox.png); /* 默认未选中图标 */
+}
+/* 未选中状态 - 鼠标悬停 */
+QCheckBox::indicator:enabled:unchecked:hover {
+        image: url(:/Images/checkBoxHover); /* 悬停时的未选中图标 */
+}
+/* 未选中状态 - 鼠标按下 */
+QCheckBox::indicator:enabled:unchecked:pressed {
+        image: url(:/Images/checkBoxPressed); /* 按下时的未选中图标 */
+}
+
+/* 选中状态 */
+QCheckBox::indicator:enabled:checked {
+        image: url(:/Images/checkBoxChecked); /* 默认选中图标 */
+}
+/* 选中状态 - 鼠标悬停 */
+QCheckBox::indicator:enabled:checked:hover {
+        image: url(:/Images/checkBoxCheckedHover); /* 悬停时的选中图标 */
+}
+/* 选中状态 - 鼠标按下 */
+QCheckBox::indicator:enabled:checked:pressed {
+        image: url(:/Images/checkBoxCheckedPressed); /* 按下时的选中图标 */
+}
+
+/* 不确定状态 (如果 flags 中支持 Qt::ItemIsTristate 并且模型实现了) */
+QCheckBox::indicator:enabled:indeterminate {
+        image: url(:/Images/checkBoxIndeterminate); /* 默认不确定图标 */
+}
+/* 不确定状态 - 鼠标悬停 */
+QCheckBox::indicator:enabled:indeterminate:hover {
+        image: url(:/Images/checkBoxIndeterminateHover); /* 悬停时的不确定图标 */
+}
+/* 不确定状态 - 鼠标按下 */
+QCheckBox::indicator:enabled:indeterminate:pressed {
+        image: url(:/Images/checkBoxIndeterminatePressed); /* 按下时的不确定图标 */
+}
+
+/* 可选：禁用状态下的复选框样式 */
+/* QCheckBox::indicator:disabled {
+        image: url(:/Images/checkBoxDisabled.png); /* 禁用图标 */
+/* } */
+/* QCheckBox::indicator:disabled:checked {
+         image: url(:/Images/checkBoxCheckedDisabled.png);
+/* } */
+
+
+/* Style for table headers */
+QHeaderView::section {
+    background-color: rgb(68, 69, 73); /* 表头背景色 */
+    color: rgb(230, 230, 230); /* 表头文本颜色 */
+    padding: 5px; /* 内边距 */
+    border: 1px solid rgb(60, 60, 60); /* 边框 */
+    /* 移除表头底部边框，使用 item 底部边框作为分隔线 */
+    border-bottom: none;
+}
+
+/* 移除最后一个表头右边框，与表格右边框融合 */
+QHeaderView::section:last {
+    border-right: none;
+}
+
+/* 如果 horizontalHeader()->setStretchLastSection(true)，最后一个 section 也会拉伸 */
+
+/* Style for the entire QHeaderView widget */
+QHeaderView {
+    /* 可选：设置整个表头的背景色或边框 */
+    /* background-color: rgb(68, 69, 73); */
+}

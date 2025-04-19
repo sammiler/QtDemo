@@ -1,0 +1,10 @@
+add_executable(
+        Slider
+        WIN32
+        main.cpp
+)
+target_link_libraries(
+        Slider
+        PRIVATE
+        ${QTLIBS}
+)

@@ -1,0 +1,27 @@
+{
+  "run": true,
+  "ignore": [
+    "h",
+    "cpp",
+    "c",
+    "hpp",
+    "mm",
+    "js",
+    "ui",
+    "json",
+    "sh",
+    "webp",
+    "txt",
+    "qrc"
+  ],
+  "ignoreName": [
+    "忽略的文件名1",
+    "忽略的文件名2"
+  ],
+  "resources": [
+    {
+      "path": "Source/Introductory/SystemTrayIcon/Resource",
+      "prefix": "/images"
+    }
+  ]
+}

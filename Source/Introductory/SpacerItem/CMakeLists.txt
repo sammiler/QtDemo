@@ -1,0 +1,10 @@
+add_executable(
+        HBoxLayout
+        WIN32
+        main.cpp
+)
+target_link_libraries(
+        HBoxLayout
+        PRIVATE
+        ${QTLIBS}
+)

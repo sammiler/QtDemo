@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/Images">
+        <file alias="open">open.png</file>
+        <file alias="openHover">openHover.png</file>
+        <file alias="openPressed">openPressed.png</file>
+        <file alias="delete">delete.png</file>
+        <file alias="deleteHover">deleteHover.png</file>
+        <file alias="deletePressed">deletePressed.png</file>
+    </qresource>
+</RCC>
