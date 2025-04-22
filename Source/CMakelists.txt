@@ -1,2 +1,4 @@
 
-add_subdirectory(Introductory)
+add_subdirectory(Intro)
+add_subdirectory(Int)
+add_subdirectory(Advance)

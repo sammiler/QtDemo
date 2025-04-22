@@ -20,8 +20,8 @@
   ],
   "resources": [
     {
-      "path": "Source/Introductory/SystemTrayIcon/Resource",
-      "prefix": "/images"
+      "path": "Source/Advance/GraphicsItems/resources",
+      "prefix": "/Images"
     }
   ]
 }

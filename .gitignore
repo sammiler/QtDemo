@@ -3,3 +3,4 @@ qt5.natvis
 build
 .idea
 util/qrc-snippets.json
+vc140.pdb

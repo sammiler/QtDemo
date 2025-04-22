@@ -1,0 +1,5 @@
+add_subdirectory(HostInfo)
+add_subdirectory(NetworkInterface)
+add_subdirectory(Thread)
+add_subdirectory(Concurrent)
+add_subdirectory(Settings)
